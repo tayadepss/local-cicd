@@ -15,6 +15,12 @@ pipeline {
                     git branch: 'master', credentialsId: 'gitHub', url: 'https://github.com/tayadepss/local-cicd.git'
                 }
         }
+        stage("Build Application"){
+            steps {
+                sh "mvn clean package"
+            }
+
+       }
     
     
     }  
