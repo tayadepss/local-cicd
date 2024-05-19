@@ -27,6 +27,17 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<properties>
+  <sonar.host.url>http://127.0.0.1:9000</sonar.host.url>
+  <sonar.login>sqa_9a9bd23e27027acf9a305fdd5d0964a4e47f79ae</sonar.login>
+  <sonar.language>java</sonar.language>
+  <sonar.scm.provider>git</sonar.scm.provider>
+</properties>
+<plugin>
+  <groupId>org.sonarsource.scanner.maven</groupId>
+  <artifactId>sonar-maven-plugin</artifactId>
+  <version>3.2</version>
+</plugin>
 	</dependencies>
 
 	<build>
