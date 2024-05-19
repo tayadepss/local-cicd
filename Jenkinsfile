@@ -10,6 +10,11 @@ pipeline {
                 cleanWs()
                 }
         }
+        stage("Checkout from SCM"){
+                steps {
+                    git branch: 'master', credentialsId: 'gitHub', url: 'https://github.com/tayadepss/local-cicd.git'
+                }
+        }
     
     
     }  
