@@ -32,7 +32,7 @@ pipeline {
 	           script {
 			def sonarqubeScannerHome = tool name: 'sonar', type: 'hudson.plugins.sonar.SonarRunnerInstallation' 
 		        withSonarQubeEnv(credentialsId: 'sonarqube-jenkins-token') { 
-                       sh "${sonarqubeScannerHome}/bin/sonar-scanner -e -Dsonar.host.url=http://sonarqube:9000 
+                       sh "${sonarqubeScannerHome}/bin/sonar-scanner -e -Dsonar.host.url=http://sonarqube:9000" 
 		        }
 	           }
            }
