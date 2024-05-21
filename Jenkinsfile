@@ -27,14 +27,13 @@ pipeline {
            }
        }
 
-        stage("SonarQube Analysis"){
+       stage("SonarQube Analysis"){
            steps {
 	           script {
-			def sonarqubeScannerHome = tool name: 'sonarqube-scanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation' 
-		        withSonarQubeEnv(credentialsId: 'sonarqube-jenkins-token') { 
-                       sh "${sonarqubeScannerHome}/bin/sonar-scanner -e -Dsonar.host.url=http://sonarqube:9000" 
+		        withSonarQubeEnv(credentialsId: 'jenkins-sonarqube-token') { 
+                        sh "mvn sonar:sonar"
 		        }
-	           }
+	           }	
            }
        }
      stage("Quality Gate"){
