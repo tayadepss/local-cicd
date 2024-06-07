@@ -8,7 +8,7 @@ pipeline {
 	    APP_NAME = "cicd-local-pipeline"
             RELEASE = "1.0.0"
             DOCKER_USER = "ashfaque9x"
-            DOCKER_PASS = 'dockerhub'
+            DOCKER_PASS = 'dockerHub'
             IMAGE_NAME = "${DOCKER_USER}" + "/" + "${APP_NAME}"
             IMAGE_TAG = "${RELEASE}-${BUILD_NUMBER}"
     }
