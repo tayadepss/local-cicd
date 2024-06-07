@@ -5,9 +5,9 @@ pipeline {
         maven 'Maven3'
     }
     environment {
-	    APP_NAME = "local-cicd-pipeline"
+	    APP_NAME = "local-cicd"
             RELEASE = "1.0.0"
-            DOCKER_USER = "ashfaque9x"
+            DOCKER_USER = "tayadepss"
             DOCKER_PASS = 'dockerHub'
             IMAGE_NAME = "${DOCKER_USER}" + "/" + "${APP_NAME}"
             IMAGE_TAG = "${RELEASE}-${BUILD_NUMBER}"
