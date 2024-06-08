@@ -3,7 +3,6 @@ pipeline {
     tools {
         jdk 'Java21'
         maven 'Maven3'
-	dockerTool 'Docker'
     }
     environment {
 	    APP_NAME = "local-cicd"
